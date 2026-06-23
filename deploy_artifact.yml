@@ -1,0 +1,11 @@
+---
+- name: Deploy Artifact
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Copy JAR
+      copy:
+        src: "target/pro3-1.0-SNAPSHOT.jar"
+        dest: "/tmp/prog8.jar"
+        mode: '0755'
